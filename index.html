@@ -418,7 +418,7 @@
                 sendTo: ["to@therecipient.com"],
                 emailSubject: "NextGen Travel UXR Research",
                 copyPaste: false,
-                submissionBody: ``,
+                submissionBody: "",
             },
             methods: {
                 submitForm: function () {
@@ -435,6 +435,7 @@
                 },
                 copyPasteShow: function () {
                     let submissionBody = this.bodyText();
+                    console.log(submissionBody)
                     this.submissionBody = submissionBody;
                     this.copyPaste = true;
                     Vue.nextTick(function () {
@@ -445,38 +446,31 @@
                     });
                 },
                 bodyText: function () {
-                    return `## Which travel-related activities are part of your work responsibilities?
-${this.travelActivities.join('\n')}
+                    return "## Which travel-related activities are part of your work responsibilities?\n"
+                        .concat(
+                            this.travelActivities.join("\n"),
+                            "\n\n## Work Responsibilities Other:\n"
+                        )
+                        .concat(this.travelActivitiesOther, "\n\n## Primary work location:\n")
+                        .concat(
+                            this.primaryWorkLocation.join("\n"),
+                            "\n\n## Primary work location other:\n"
+                        )
+                        .concat(
+                            this.primaryWorkLocationOther,
+                            "\n\n## How would you like to participate in our studies?\n"
+                        )
+                        .concat(
+                            this.participation.join("\n"),
+                            "\n\n## In which of these languages would you prefer providing feedback?\n"
+                        )
+                        .concat(this.language.join("\n"), "\n\n## Current Department:\n")
+                        .concat(this.currentDepartment, "\n\n## Current Title:\n")
+                        .concat(this.currentTitle, "\n\n## First Name:\n")
+                        .concat(this.firstName, "\n\n## Last Name:\n")
+                        .concat(this.lastName, "\n\n## Email Address:\n")
+                        .concat(this.emailAddress);
 
-## Work Responsibilities Other:
-${this.travelActivitiesOther}
-
-## Primary work location:
-${this.primaryWorkLocation.join('\n')}
-
-## Primary work location other:
-${this.primaryWorkLocationOther}
-
-## How would you like to participate in our studies?
-${this.participation.join('\n')}
-
-## In which of these languages would you prefer providing feedback?
-${this.language.join('\n')}
-
-## Current Department:
-${this.currentDepartment}
-
-## Current Title:
-${this.currentTitle}
-
-## First Name:
-${this.firstName}
-
-## Last Name:
-${this.lastName}
-
-## Email Address:
-${this.emailAddress}`
                 }
             }
         })
