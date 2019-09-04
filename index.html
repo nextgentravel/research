@@ -16,6 +16,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
     <script src="https://unpkg.com/vuex"></script>
     <script src="js/vue-clipboard.min.js"></script>
+    <script>VueClipboard.config.autoSetContainer = true</script>
 </head>
 
 <body>
@@ -376,7 +377,6 @@
     </script>
     <script>
         $(function () {
-            VueClipboard.config.autoSetContainer = true // add this line
             let travelActivitiesCheckbox = $('#travelActivitiesOther');
             let travelActivitiesHidden = $("#hiddentravelActivitiesOther");
             let locationCheckbox = $('#locationOtherCheckbox');
