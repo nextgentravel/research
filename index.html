@@ -429,10 +429,11 @@
                         .concat(submissionBody.replace(/\r\n|\r|\n/g, "%0D%0A"));
                     window.location = mailString;
                 },
-                onCopy: function () {
-                    alert("Copied")
+                onCopy: function (e) {
+                    console.log(e);
+                    alert("Copied: " + e.text)
                 },
-                onCopyError: function () {
+                onCopyError: function (e) {
                     alert("Copy Error")
                 },
                 copyPasteShow: function () {
