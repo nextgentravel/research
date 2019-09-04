@@ -13,7 +13,7 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
     <script src="https://unpkg.com/vuex"></script>
     <script src="js/vue-clipboard.min.js"></script>
 </head>
@@ -423,8 +423,10 @@
             methods: {
                 submitForm: function () {
                     let submissionBody = this.bodyText();
-                    let mailString =
-                        `mailto:${this.sendTo.join(',')}?subject=${this.emailSubject}&body=${submissionBody.replace(/\r\n|\r|\n/g, "%0D%0A")}`;
+                    let mailString = "mailto:"
+                        .concat(this.sendTo.join(","), "?subject=")
+                        .concat(this.emailSubject, "&body=")
+                        .concat(submissionBody.replace(/\r\n|\r|\n/g, "%0D%0A"));
                     window.location = mailString;
                 },
                 onCopy: function () {
