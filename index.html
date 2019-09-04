@@ -431,6 +431,7 @@
                 },
                 onCopy: function (e) {
                     console.log(e);
+                    e.cancelBubble = true;
                     alert("Copied: " + e.text)
                 },
                 onCopyError: function (e) {
