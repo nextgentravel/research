@@ -33,13 +33,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">French
-                                <span class="sr-only">(current)</span>
-                            </a>
-                        </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./../index.html">Engish</a>
+                            <a class="nav-link" href="./../index.html">English</a>
                         </li>
                     </ul>
                 </div>
@@ -212,7 +207,7 @@
                                         <input id="hiddentravelActivitiesOther" v-model="travelActivitiesOther"
                                             type="text" name="travelActivitiesOther" class="form-control"
                                             aria-describedby="travelActivitiesOther"
-                                            placeholder="Which other travel-related activities are part of your work responsibilities?">
+                                            placeholder="">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -235,7 +230,7 @@
                                         <input id="hiddenPrimaryWorkLocationOther" v-model="primaryWorkLocationOther"
                                             type="text" name="locationOther" class="form-control"
                                             aria-describedby="PrimaryWorkLocationOther"
-                                            placeholder="Where are you located?">
+                                            placeholder="">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -296,32 +291,31 @@
                                     <label for=""><b>Ministère actuel: </b></label>
                                     <input type="text" v-model="currentDepartment" name="currentDepartment"
                                         class="form-control" aria-describedby="emailHelp"
-                                        placeholder="Enter your current department">
+                                        placeholder="">
                                 </div>
                                 <div class="form-group">
                                     <label for=""><b>Titre/poste actuel</b></label>
                                     <input type="text" v-model="currentTitle" name="currentTitle" class="form-control"
-                                        aria-describedby="emailHelp" placeholder="Enter your title / position">
+                                        aria-describedby="emailHelp" placeholder="">
                                 </div>
 
                                 <div class="form-group">
                                     <label for=""><b>Prénom</b></label>
                                     <input type="text" v-model="firstName" name="firstName" class="form-control"
-                                        aria-describedby="emailHelp" placeholder="Enter your first name">
+                                        aria-describedby="emailHelp" placeholder="">
                                 </div>
                                 <div class="form-group">
                                     <label for=""><b>Nom</b></label>
                                     <input type="text" v-model="lastName" name="lastName" class="form-control"
-                                        aria-describedby="emailHelp" placeholder="Enter your last name">
+                                        aria-describedby="emailHelp" placeholder="">
                                 </div>
                                 <div class="form-group">
                                     <label for=""><b>Courriel</b></label>
                                     <input type="email" v-model="emailAddress" name="emailAddress" class="form-control"
-                                        aria-describedby="emailHelp" placeholder="Enter your email address">
+                                        aria-describedby="emailHelp" placeholder="">
                                 </div>
-                                <button class="btn btn-primary" v-on:click.prevent="submitForm">Soumettre</button>
-                                <button class="btn btn-primary" v-on:click.prevent="copyPasteShow">Copy/Paste to
-                                    Email</button>
+                                <button class="btn btn-primary" v-on:click.prevent="submitForm">Ouvrez un modèle de courriel</button>
+                                <button class="btn btn-primary" v-on:click.prevent="copyPasteShow">Le modèle ne fonctionne pas?</button>
                             </form>
                             <br />
                             <br />
@@ -336,30 +330,28 @@
                 <div class="col-md-10">
                     <div v-if="copyPaste">
                         <div class="card bg-light mb-3">
-                            <div class="card-header">Thank you</div>
                             <div class="card-body">
-                                <p>Please copy and paste the following items into the relevant
-                                    fields of your email client.</p>
+                                <p>Veuillez copier et coller le modèle de courrier électronique suivant et envoyer votre réponse par courrier électronique</p>
                                 <div>
-                                    <h5 class="d-inline">Email Address: </h5>
+                                    <h5 class="d-inline">Courrier: </h5>
                                     <button type="button" class="btn btn-outline-primary btn-sm float-right"
                                         v-clipboard:copy="sendTo.join(',')" v-clipboard:success="onCopy"
-                                        v-clipboard:error="onCopyError">COPY EMAIL</button>
+                                        v-clipboard:error="onCopyError">COPY Courrier</button>
                                     <pre>{{sendTo.join(',')}}</pre>
                                 </div>
                                 <div>
-                                    <h5 class="d-inline">Subject: </h5>
+                                    <h5 class="d-inline">Objet: </h5>
                                     <button type="button" class="btn btn-outline-primary btn-sm float-right"
                                         v-clipboard:copy="emailSubject" v-clipboard:success="onCopy"
-                                        v-clipboard:error="onCopyError">COPY SUBJECT</button>
+                                        v-clipboard:error="onCopyError">COPY Objet</button>
                                     <pre>{{emailSubject}}</pre>
                                 </div>
                                 <div>
                                     <div>
-                                        <h5 class="d-inline">Email Body: </h5>
+                                        <h5 class="d-inline">Modèle de courrier électronique: </h5>
                                         <button type="button" class="btn btn-outline-primary btn-sm float-right"
                                             v-clipboard:copy="submissionBody" v-clipboard:success="onCopy"
-                                            v-clipboard:error="onCopyError">COPY BODY</button>
+                                            v-clipboard:error="onCopyError">COPY modèle de courrier électronique</button>
                                     </div>
                                     <br>
                                     <pre>{{submissionBody}}</pre>
@@ -426,7 +418,7 @@
                 lastName: "",
                 emailAddress: "",
                 sendTo: ["to@therecipient.com"],
-                emailSubject: "NextGen Travel UXR Research",
+                emailSubject: "Appel de participants - Recherche sur les utilisateurs",
                 copyPaste: false,
                 submissionBody: "",
             },
@@ -460,29 +452,29 @@
                     });
                 },
                 bodyText: function () {
-                    return "## Which travel-related activities are part of your work responsibilities?\n"
+                    return "## Quelles sont les activités liées aux voyages qui font partie de vos responsabilités professionnelles?\n"
                         .concat(
                             this.travelActivities.join("\n"),
-                            "\n\n## Work Responsibilities Other:\n"
+                            "\n\n## Lieu de travail principal:\n"
                         )
-                        .concat(this.travelActivitiesOther, "\n\n## Primary work location:\n")
+                        .concat(this.travelActivitiesOther, "\n\n## Lieu de travail principal:\n")
                         .concat(
                             this.primaryWorkLocation.join("\n"),
-                            "\n\n## Primary work location other:\n"
+                            "\n\n## Lieu de travail principal:\n"
                         )
                         .concat(
                             this.primaryWorkLocationOther,
-                            "\n\n## How would you like to participate in our studies?\n"
+                            "\n\n## Comment aimeriez-vous participer à nos études?\n"
                         )
                         .concat(
                             this.participation.join("\n"),
-                            "\n\n## In which of these languages would you prefer providing feedback?\n"
+                            "\n\n## Dans quelle langue préférez-vous donner votre avis?\n"
                         )
-                        .concat(this.language.join("\n"), "\n\n## Current Department:\n")
-                        .concat(this.currentDepartment, "\n\n## Current Title:\n")
-                        .concat(this.currentTitle, "\n\n## First Name:\n")
-                        .concat(this.firstName, "\n\n## Last Name:\n")
-                        .concat(this.lastName, "\n\n## Email Address:\n")
+                        .concat(this.language.join("\n"), "\n\n## Ministère actuel:\n")
+                        .concat(this.currentDepartment, "\n\n## Titre/poste actuel:\n")
+                        .concat(this.currentTitle, "\n\n## Prénom:\n")
+                        .concat(this.firstName, "\n\n## Nom:\n")
+                        .concat(this.lastName, "\n\n## Courriel:\n")
                         .concat(this.emailAddress);
 
                 }
