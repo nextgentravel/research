@@ -15,7 +15,11 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
     <script src="https://unpkg.com/vuex"></script>
     <script src="js/vue-clipboard.min.js"></script>
-    <script>window.addEventListener = window.addEventListener || function (e, f) { window.attachEvent('on' + e, f); };</script>
+    <script>
+        window.addEventListener = window.addEventListener || function (e, f) {
+            window.attachEvent('on' + e, f);
+        };
+    </script>
 </head>
 
 <body>
@@ -60,28 +64,24 @@
 
                         <h1 class="display-4 text-center">Call for User Research Participants</h1>
                         <p class="lead">
-                            Public Services and Procurement Canada - NextGen Travel Program, are looking for employees
-                            in
-                            the federal government to discuss their travel experience in the federal public service.</p>
+                            The Next Generation (NextGen) Travel Program is a team within Public Services and
+                            Procurement Canada with a mandate to re-imagine the future of travel for the Government of
+                            Canada (GC) by focusing on what the users need. We are focusing on a solution that works for
+                            you, so you can focus on your work and what really matters. Together, we are setting a new
+                            standard for GC travel and are excited to build something exceptional together.</p>
                         <p class="lead">
                             Continuing to build on our cross-country engagement tour with hundreds of public servants
-                            like
-                            yourself, we've partnered with Code for Canada to imagine what a user-centric business
-                            travel
-                            service could look like.
+                            like yourself, we've partnered with Code for Canada to explore what a user-centric business
+                            travel service could look like. To do this, we are looking to gather more feedback, in the
+                            form of one-on-one interviews, surveys and other research. Could this be you? Are you
+                            interested? Please fill in the form below and we'll be in touch!
                         </p>
-                        <p class="lead">
-                            We are looking to gather more feedback, in the form of one-on-one interviews, surveys and
-                            other
-                            research. Interested? Please fill in the form below and we'll be in touch!
-                        </p>
+
                         <hr class="my-4">
                         <p>
                             Code for Canada is a national nonprofit that connects government innovators with the tech
-                            and
-                            design community. Our programs enable governments to deliver better digital public services
-                            and
-                            empower communities to solve civic challenges using technology and design.
+                            and design community. Our programs enable governments to deliver better digital public
+                            services and empower communities to solve civic challenges using technology and design.
                         </p>
                     </div>
 
@@ -93,8 +93,7 @@
                     </div>
                     <p>
                         Public Services and Procurement Canada (PSPC) - NextGen Travel Program is committed to
-                        protecting
-                        the privacy rights of individuals. <br />
+                        protecting the privacy rights of individuals.<br />
                         <br />
                         <div class="text-center">
                             <a class="btn btn-dark" data-toggle="collapse" href="#collapse" role="button"
@@ -105,29 +104,17 @@
                     </p>
                     <div class="collapse" id="collapse">
                         <div class="card card-body" style="text-align: left;">
-                            <p>Public Services and Procurement Canada (PSPC) - NextGen Travel Program is committed to
-                                protecting the privacy rights of individuals.</p>
                             <p>The definition of “personal information” is any information, in any form, about an
-                                identifiable individual. Refer to section 3 of the <a
-                                    href="https://laws-lois.justice.gc.ca/eng/acts/P-21/">Privacy Act</a> for further
-                                details regarding
-                                personal information.</p>
+                                identifiable individual. Refer to section 3 of the Privacy Act for further details
+                                regarding personal information.</p>
                             <p>The personal information you provide will be used by Public Services and Procurement
-                                Canada
-                                for research and development purposes; and is collected under the authority of section
-                                11 of
-                                Public Service Employment Act. Provision of
-                                your information is voluntary, and will not be used to make any administrative decisions
-                                about you.</p>
+                                Canada for research and development purposes only; and is collected under the authority
+                                of section 11 of Public Service Employment Act. Provision of your information is
+                                voluntary, and will not be used to make any administrative decisions about you.</p>
                             <p>Personal information is collected and used as described in the Treasury Board
-                                Secretariat's
-                                Standard Personal Information Bank <a
-                                    href="https://www.canada.ca/en/treasury-board-secretariat/services/access-information-privacy/access-information/information-about-programs-information-holdings/standard-personal-information-banks.html#psu938">Outreach
-                                    Activities (PSU 938)</a></p>
-                            <p>Individuals have the right to file a complaint with the <a
-                                    href="https://www.priv.gc.ca/index_e.asp">Privacy Commissioner of Canada</a>
-                                regarding
-                                the department's handling of their personal information.</p>
+                                Secretariat’s Standard Personal Information Bank Outreach Activities (PSU 938)</p>
+                            <p>Individuals have the right to file a complaint with the Privacy Commissioner of Canada
+                                regarding the department’s handling of their personal information.</p>
                         </div>
                     </div>
 
@@ -139,55 +126,66 @@
                             <h2 class="text-center">Research Participant Diversity & Inclusivity</h2>
                             <p>
                                 Inclusivity and accessibility are very important to us. As part of our research, we aim
-                                to
-                                collect information on, and speak to, a pool of participants that is diverse and
+                                to collect information on, and speak to, a pool of participants that is as diverse and
                                 representative of the people who work within the federal public service. This
-                                information
-                                will be kept confidential and will only be used to ensure equitable participation.
+                                information will be kept confidential and will only be used to ensure equitable
+                                participation.
                             </p>
                             <p>
                                 We appreciate your interest in helping to develop a user-centric travel service for the
-                                Government of Canada. To sign up, please contact us via the form that follows. </p>
+                                Government of Canada. To sign up, please contact us via the form below.
+                            </p>
                             <br />
                         </div>
                     </div>
                     <div v-if="!copyPaste" class="row">
                         <div class="col-sm-12">
                             <h2 class="text-center">Participate</h2>
+                            <p>Thank you for your interest in participating in User Experience Research with NextGen
+                                Travel! Please answer the following questions and we will contact you with relevant
+                                research opportunities.</p>
                             <form>
                                 <div class="form-group">
-                                    <label for="travelActivities">Which travel-related activities are part of your work
-                                        responsibilities? (Check all that apply)</label>
+                                    <label for="travelActivities"><b>Which travel-related activities are part of your work
+                                        responsibilities? (Check all that apply)</b></label>
                                     <div class="form-check">
                                         <input class="form-check-input" v-model="travelActivities" type="checkbox"
-                                            value="I do or have traveled for work" name="responsibilities"
-                                            id="traveledForWork" v-model="traveledForWor">
+                                            value="I do or have travelled for work (in the last two years)"
+                                            name="responsibilities" id="traveledForWork" v-model="traveledForWor">
                                         <label class="form-check-label" for="traveledForWork">
-                                            I do or have traveled for work
+                                            I do or have travelled for work (in the last two years)
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" v-model="travelActivities" type="checkbox"
-                                            value="I assist others with booking or expenses" name="responsibilities"
-                                            id="assist">
+                                            value="I have travelled for work (more than two years ago)"
+                                            name="responsibilities" id="assist">
                                         <label class="form-check-label" for="assist">
-                                            I assist others with booking or expenses
+                                            I have travelled for work (more than two years ago)
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" v-model="travelActivities" type="checkbox"
+                                            value="I assist others with booking travel or claiming expenses"
+                                            name="responsibilities" id="approveforothers">
+                                        <label class="form-check-label" for="approveforothers">
+                                            I assist others with booking travel or claiming expenses
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" v-model="travelActivities" type="checkbox"
                                             value="I approve travel for others" name="responsibilities"
-                                            id="approveforothers">
-                                        <label class="form-check-label" for="approveforothers">
+                                            id="processOrReviews">
+                                        <label class="form-check-label" for="processOrReviews">
                                             I approve travel for others
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" v-model="travelActivities" type="checkbox"
-                                            value="I process or review financials related to travel"
+                                            value="I review, process or approve financials related to travel"
                                             name="responsibilities" id="processOrReviews">
                                         <label class="form-check-label" for="processOrReviews">
-                                            I process or review financials related to travel
+                                            I review, process or approve financials related to travel
                                         </label>
                                     </div>
                                     <div class="form-check">
@@ -206,7 +204,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="travelActivities">Primary work location</label>
+                                    <label for="travelActivities"><b>Primary work location</b></label>
                                     <div class="form-check">
                                         <input class="form-check-input" v-model="primaryWorkLocation" type="checkbox"
                                             name="location" value="National Capital Region" id="nationalCapitalRegion">
@@ -229,7 +227,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="participation">How would you like to participate in our studies?</label>
+                                    <label for="participation"><b>How would you like to participate in our studies?</b></label>
                                     <div class="form-check">
                                         <input class="form-check-input" v-model="participation" type="checkbox"
                                             value="I'm willing to travel locally to meet you" name="participate"
@@ -264,8 +262,8 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="language">In which of these languages would you prefer providing
-                                        feedback?</label>
+                                    <label for="language"><b>In which of these languages would you prefer providing
+                                        feedback?</b></label>
                                     <div class="form-check">
                                         <input class="form-check-input" v-model="language" type="checkbox"
                                             name="language" value="english" id="english">
@@ -282,29 +280,29 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Current Department</label>
+                                    <label for=""><b>Current Department</b></label>
                                     <input type="text" v-model="currentDepartment" name="currentDepartment"
                                         class="form-control" aria-describedby="emailHelp"
                                         placeholder="Enter your current department">
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Current title / position</label>
+                                    <label for=""><b>Current title / position</b></label>
                                     <input type="text" v-model="currentTitle" name="currentTitle" class="form-control"
                                         aria-describedby="emailHelp" placeholder="Enter your title / position">
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="">First Name</label>
+                                    <label for=""><b>First Name</b></label>
                                     <input type="text" v-model="firstName" name="firstName" class="form-control"
                                         aria-describedby="emailHelp" placeholder="Enter your first name">
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Last Name</label>
+                                    <label for=""><b>Last Name</b></label>
                                     <input type="text" v-model="lastName" name="lastName" class="form-control"
                                         aria-describedby="emailHelp" placeholder="Enter your last name">
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Email address</label>
+                                    <label for=""><b>Email address</b></label>
                                     <input type="email" v-model="emailAddress" name="emailAddress" class="form-control"
                                         aria-describedby="emailHelp" placeholder="Enter your email address">
                                 </div>

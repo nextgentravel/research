@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Public Services and Procurement Canada - NextGen Travel Program</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script src="https://unpkg.com/vuex"></script>
+    <script src="js/vue-clipboard.min.js"></script>
+    <script>
+        window.addEventListener = window.addEventListener || function (e, f) {
+            window.attachEvent('on' + e, f);
+        };
+    </script>
+</head>
+
+<body>
+    <div id="vapp">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">French
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./../index.html">Engish</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- Page Content -->
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-md-10">
+                    <div class="jumbotron">
+                        <div class="text-center">
+                            <img src="./images/cfc-web-logo.png" alt="Code for Canada Logo" class="img-thumbnail"
+                                width=258>
+                            <img src="./images/nextgen-web-logo-en.png"
+                                alt="Public Services and Procurement Canada - NextGen Travel Program Logo"
+                                class="img-thumbnail" width=365>
+                        </div>
+
+                        <br />
+
+                        <h1 class="display-4 text-center">Appel de participants - Recherche sur les utilisateurs</h1>
+                        <p class="lead">
+                            Le Programme de voyage prochaine génération et Services publics et Approvisionnement Canada
+                            forment une équipe dont le mandat consiste à reconcevoir l’avenir des voyages pour le
+                            gouvernement du Canada (GC) en se concentrant sur les besoins des utilisateurs. Nous nous
+                            concentrons sur une solution adaptée à vos besoins, afin que vous puissiez vous concentrer
+                            sur votre travail et ce qui compte vraiment. Ensemble, nous établissons une nouvelle norme
+                            pour les voyages du GC et nous sommes enthousiastes à l’idée de créer ensemble quelque chose
+                            d’exceptionnel.</p>
+                        <p class="lead">
+                            Dans la foulée de notre tournée d’engagement pancanadienne avec des centaines de
+                            fonctionnaires comme vous, nous avons établi un partenariat avec Code for Canada pour
+                            explorer à quoi pourrait ressembler un service de voyages d’affaires axé sur l’utilisateur.
+                            Pour ce faire, nous cherchons à recueillir davantage de commentaires, sous forme d’entrevues
+                            individuelles, de sondages et d’autres recherches. Vous êtes intéressé? Veuillez remplir le
+                            formulaire ci-dessous et nous vous contacterons!
+                        </p>
+                        <hr class="my-4">
+                        <p>
+                            Code for Canada est un organisme national sans but lucratif qui crée des liens entre les
+                            innovateurs du gouvernement et des gens issus de la communauté de la technologie et de la
+                            conception pour que le gouvernement puisse offrir de meilleurs services numériques au public
+                            et fournisse aux communautés les outils dont elles ont besoin pour surmonter les défis
+                            civiques.
+                        </p>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 class="text-center">Avis de confidentialité</h2>
+                            <br />
+                        </div>
+                    </div>
+                    <p>
+                        Services publics et Approvisionnement Canada (SPAC) - Le Programme de voyage prochaine
+                        génération s’engage à protéger le droit à la vie privée des personnes. <br />
+                        <br />
+                        <div class="text-center">
+                            <a class="btn btn-dark" data-toggle="collapse" href="#collapse" role="button"
+                                aria-expanded="false" aria-controls="collapse">
+                                Étendre
+                            </a>
+                        </div>
+                    </p>
+                    <div class="collapse" id="collapse">
+                        <div class="card card-body" style="text-align: left;">
+                            <p>Les « renseignements personnels » se définissent comme étant les renseignements, quels
+                                que soient leur forme et leur support, concernant un individu identifiable. Veuillez
+                                consulter l’article 3 de la Loi sur la protection des renseignements personnels pour
+                                obtenir de plus amples détails concernant cette notion.</p>
+                            <p>Les renseignements personnels que vous fournissez seront utilisés par SPAC à des fins de
+                                recherche et développement seulement. Ils sont recueillis en vertu de l’article 11 de la
+                                Loi sur l’emploi dans la fonction publique. La communication de vos renseignements
+                                personnels est volontaire et ne sera pas utilisée pour prendre des décisions
+                                administratives à votre sujet.</p>
+                            <p>Les renseignements personnels sont décrits au Fichier de renseignements personnels
+                                ordinaires du Secrétariat du Conseil du Trésor Activités de sensibilisation (POU 938).
+                            </p>
+                            <p>Toute personne a le droit de déposer une plainte auprès du commissaire à la protection de
+                                la vie privée du Canada concernant le traitement de ses renseignements personnels par le
+                                Ministère.</p>
+                        </div>
+                    </div>
+
+                    <br />
+                    <br />
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 class="text-center">Diversité et inclusion des participants à la recherche</h2>
+                            <p>
+                                L’inclusion et l’accessibilité sont très importantes pour nous. Dans le cadre de notre
+                                recherche, nous visons à recueillir de l’information sur un bassin de participants aussi
+                                diversifié et représentatif des personnes qui travaillent dans la fonction publique
+                                fédérale, et à nous adresser à eux. Ces renseignements demeureront confidentiels et ne
+                                seront utilisés que pour assurer une participation équitable.
+                            </p>
+                            <p>Nous vous remercions de l’intérêt que vous portez à l’élaboration d’un service de voyage
+                                axé sur l’utilisateur pour le gouvernement du Canada. Pour vous inscrire, veuillez nous
+                                contacter via le formulaire ci-dessous.</p>
+                            <br />
+                        </div>
+                    </div>
+                    <div v-if="!copyPaste" class="row">
+                        <div class="col-sm-12">
+                            <h2 class="text-center">Participer</h2>
+                            <p>Nous vous remercions de l’intérêt que vous portez à participer à la recherche sur
+                                l’expérience utilisateur avec le Programme de voyage prochaine génération! Veuillez
+                                répondre aux questions suivantes et nous communiquerons avec vous pour vous informer des
+                                possibilités de recherche pertinentes.</p>
+                            <form>
+                                <div class="form-group">
+                                    <label for="travelActivities"><b>Quelles sont les activités liées aux voyages qui font
+                                        partie de vos responsabilités professionnelles? (Cochez tout ce qui
+                                        s’applique)</b></label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" v-model="travelActivities" type="checkbox"
+                                            value="I do or have travelled for work (in the last two years)"
+                                            id="traveledForWork" v-model="traveledForWor">
+                                        <label class="form-check-label" for="traveledForWork">
+                                            Je fais ou j’ai fait des voyages pour le travail (au cours des deux
+                                            dernières années).
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" v-model="travelActivities" type="checkbox"
+                                            value="I have travelled for work (more than two years ago)"
+                                            id="assist">
+                                        <label class="form-check-label" for="assist">
+                                            J’ai voyagé pour le travail (il y a plus de deux ans).
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" v-model="travelActivities" type="checkbox"
+                                            value="I assist others with booking travel or claiming expenses"
+                                            id="approveforothers">
+                                        <label class="form-check-label" for="approveforothers">
+                                            J’aide d’autres personnes à réserver un voyage ou à faire une demande de
+                                            remboursement de frais.
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" v-model="travelActivities" type="checkbox"
+                                            value="I approve travel for others" name="responsibilities"
+                                            id="approveforothers">
+                                        <label class="form-check-label" for="approveforothers">
+                                            J’examine, je traite ou j’approuve les états financiers relatifs aux
+                                            voyages.
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" v-model="travelActivities" type="checkbox"
+                                            value="I review, process or approve financials related to travel"
+                                            name="responsibilities" id="processOrReviews">
+                                        <label class="form-check-label" for="processOrReviews">
+                                            Autre, veuillez préciser.
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" v-model="travelActivities" type="checkbox"
+                                            value="Other, please specify" name="responsibilities"
+                                            id="travelActivitiesOther">
+                                        <label class="form-check-label" for="other">
+                                            Other, please specify
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="hiddentravelActivitiesOther" v-model="travelActivitiesOther"
+                                            type="text" name="travelActivitiesOther" class="form-control"
+                                            aria-describedby="travelActivitiesOther"
+                                            placeholder="Which other travel-related activities are part of your work responsibilities?">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="travelActivities"><b>Lieu de travail principal</b></label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" v-model="primaryWorkLocation" type="checkbox"
+                                            name="location" value="National Capital Region" id="nationalCapitalRegion">
+                                        <label class="form-check-label" for="nationalCapitalRegion">
+                                            Région de la capitale nationale.
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" v-model="primaryWorkLocation" type="checkbox"
+                                            name="locationOther" value="other" id="locationOtherCheckbox">
+                                        <label class="form-check-label" for="locationOther">
+                                            Autre, veuillez préciser.
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="hiddenPrimaryWorkLocationOther" v-model="primaryWorkLocationOther"
+                                            type="text" name="locationOther" class="form-control"
+                                            aria-describedby="PrimaryWorkLocationOther"
+                                            placeholder="Where are you located?">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="participation"><b>Comment aimeriez-vous participer à nos études ?</b></label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" v-model="participation" type="checkbox"
+                                            value="I'm willing to travel locally to meet you" name="participate"
+                                            id="willingToTravelLocally">
+                                        <label class="form-check-label" for="willingToTravelLocally">
+                                            Je suis prêt à me déplacer sur place pour vous rencontrer.
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" v-model="participation" type="checkbox"
+                                            value="I'm willing to use my computer and/or mobile phone"
+                                            name="participate" id="devices">
+                                        <label class="form-check-label" for="devices">
+                                            Je suis prêt à utiliser mon ordinateur ou mon téléphone portable.
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" v-model="participation" type="checkbox"
+                                            value="I'm willing to have a NextGen Travel researcher come visit me at work"
+                                            name="participate" id="visitAtWork">
+                                        <label class="form-check-label" for="visitAtWork">
+                                            Je suis prêt à recevoir la visite d’un chercheur du Programme de voyage de
+                                            prochaine génération au travail.
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" v-model="participation" type="checkbox"
+                                            value="I'm willing to complete online activities or surveys"
+                                            name="participate" id="online">
+                                        <label class="form-check-label" for="online">
+                                            Je suis prêt à participer à des activités en ligne ou à répondre à des
+                                            sondages.
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="language"><b>Dans quelle langue préférez-vous donner votre avis?</b></label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" v-model="language" type="checkbox"
+                                            name="language" value="french" id="french">
+                                        <label class="form-check-label" for="french">
+                                            Français
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" v-model="language" type="checkbox"
+                                            name="language" value="english" id="english">
+                                        <label class="form-check-label" for="english">
+                                            Anglais
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for=""><b>Ministère actuel: </b></label>
+                                    <input type="text" v-model="currentDepartment" name="currentDepartment"
+                                        class="form-control" aria-describedby="emailHelp"
+                                        placeholder="Enter your current department">
+                                </div>
+                                <div class="form-group">
+                                    <label for=""><b>Titre/poste actuel</b></label>
+                                    <input type="text" v-model="currentTitle" name="currentTitle" class="form-control"
+                                        aria-describedby="emailHelp" placeholder="Enter your title / position">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for=""><b>Prénom</b></label>
+                                    <input type="text" v-model="firstName" name="firstName" class="form-control"
+                                        aria-describedby="emailHelp" placeholder="Enter your first name">
+                                </div>
+                                <div class="form-group">
+                                    <label for=""><b>Nom</b></label>
+                                    <input type="text" v-model="lastName" name="lastName" class="form-control"
+                                        aria-describedby="emailHelp" placeholder="Enter your last name">
+                                </div>
+                                <div class="form-group">
+                                    <label for=""><b>Courriel</b></label>
+                                    <input type="email" v-model="emailAddress" name="emailAddress" class="form-control"
+                                        aria-describedby="emailHelp" placeholder="Enter your email address">
+                                </div>
+                                <button class="btn btn-primary" v-on:click.prevent="submitForm">Soumettre</button>
+                                <button class="btn btn-primary" v-on:click.prevent="copyPasteShow">Copy/Paste to
+                                    Email</button>
+                            </form>
+                            <br />
+                            <br />
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <br />
+            </div>
+
+            <div class="row justify-content-md-center" id="copyPasteAnchor">
+                <div class="col-md-10">
+                    <div v-if="copyPaste">
+                        <div class="card bg-light mb-3">
+                            <div class="card-header">Thank you</div>
+                            <div class="card-body">
+                                <p>Please copy and paste the following items into the relevant
+                                    fields of your email client.</p>
+                                <div>
+                                    <h5 class="d-inline">Email Address: </h5>
+                                    <button type="button" class="btn btn-outline-primary btn-sm float-right"
+                                        v-clipboard:copy="sendTo.join(',')" v-clipboard:success="onCopy"
+                                        v-clipboard:error="onCopyError">COPY EMAIL</button>
+                                    <pre>{{sendTo.join(',')}}</pre>
+                                </div>
+                                <div>
+                                    <h5 class="d-inline">Subject: </h5>
+                                    <button type="button" class="btn btn-outline-primary btn-sm float-right"
+                                        v-clipboard:copy="emailSubject" v-clipboard:success="onCopy"
+                                        v-clipboard:error="onCopyError">COPY SUBJECT</button>
+                                    <pre>{{emailSubject}}</pre>
+                                </div>
+                                <div>
+                                    <div>
+                                        <h5 class="d-inline">Email Body: </h5>
+                                        <button type="button" class="btn btn-outline-primary btn-sm float-right"
+                                            v-clipboard:copy="submissionBody" v-clipboard:success="onCopy"
+                                            v-clipboard:error="onCopyError">COPY BODY</button>
+                                    </div>
+                                    <br>
+                                    <pre>{{submissionBody}}</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+
+    </div>
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+    <script>
+        $(function () {
+            let travelActivitiesCheckbox = $('#travelActivitiesOther');
+            let travelActivitiesHidden = $("#hiddentravelActivitiesOther");
+            let locationCheckbox = $('#locationOtherCheckbox');
+            let locationHidden = $("#hiddenPrimaryWorkLocationOther");
+            travelActivitiesHidden.hide();
+            travelActivitiesCheckbox.change(function () {
+                if (travelActivitiesCheckbox.is(':checked')) {
+                    travelActivitiesHidden.show();
+                } else {
+                    travelActivitiesHidden.hide();
+                    travelActivitiesHidden.val("");
+                }
+            });
+            locationHidden.hide();
+            locationCheckbox.change(function () {
+                if (locationCheckbox.is(':checked')) {
+                    locationHidden.show();
+                } else {
+                    locationHidden.hide();
+                    locationHidden.val("");
+                }
+            });
+
+
+        });
+        const vueApp = new Vue({
+            el: '#vapp',
+            data: {
+                travelActivities: [],
+                travelActivitiesOther: "",
+                primaryWorkLocationOther: "",
+                primaryWorkLocation: [],
+                participation: [],
+                language: [],
+                currentDepartment: "",
+                currentTitle: "",
+                firstName: "",
+                lastName: "",
+                emailAddress: "",
+                sendTo: ["to@therecipient.com"],
+                emailSubject: "NextGen Travel UXR Research",
+                copyPaste: false,
+                submissionBody: "",
+            },
+            methods: {
+                submitForm: function () {
+                    let submissionBody = this.bodyText();
+                    let mailString = "mailto:"
+                        .concat(this.sendTo.join(","), "?subject=")
+                        .concat(this.emailSubject, "&body=")
+                        .concat(submissionBody.replace(/\r\n|\r|\n/g, "%0D%0A"));
+                    window.location = mailString;
+                },
+                onCopy: function (e) {
+                    console.log(e);
+                    e.cancelBubble = true;
+                    alert("Copied: " + e.text)
+                },
+                onCopyError: function (e) {
+                    alert("Copy Error")
+                },
+                copyPasteShow: function () {
+                    let submissionBody = this.bodyText();
+                    console.log(submissionBody)
+                    this.submissionBody = submissionBody;
+                    this.copyPaste = true;
+                    Vue.nextTick(function () {
+                        var el = document.getElementById("copyPasteAnchor");
+                        el.scrollIntoView({
+                            block: 'start'
+                        });
+                    });
+                },
+                bodyText: function () {
+                    return "## Which travel-related activities are part of your work responsibilities?\n"
+                        .concat(
+                            this.travelActivities.join("\n"),
+                            "\n\n## Work Responsibilities Other:\n"
+                        )
+                        .concat(this.travelActivitiesOther, "\n\n## Primary work location:\n")
+                        .concat(
+                            this.primaryWorkLocation.join("\n"),
+                            "\n\n## Primary work location other:\n"
+                        )
+                        .concat(
+                            this.primaryWorkLocationOther,
+                            "\n\n## How would you like to participate in our studies?\n"
+                        )
+                        .concat(
+                            this.participation.join("\n"),
+                            "\n\n## In which of these languages would you prefer providing feedback?\n"
+                        )
+                        .concat(this.language.join("\n"), "\n\n## Current Department:\n")
+                        .concat(this.currentDepartment, "\n\n## Current Title:\n")
+                        .concat(this.currentTitle, "\n\n## First Name:\n")
+                        .concat(this.firstName, "\n\n## Last Name:\n")
+                        .concat(this.lastName, "\n\n## Email Address:\n")
+                        .concat(this.emailAddress);
+
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>
