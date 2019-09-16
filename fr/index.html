@@ -373,7 +373,7 @@
     </script>
     <script>
         function mailtoHack(href) {
-            window.open(encodeURIComponent(href));
+            window.open(href);
         }
 
         $(function () {
@@ -430,7 +430,8 @@
                         let mailString = "mailto:"
                             .concat(this.sendTo.join(","), "?subject=")
                             .concat(this.emailSubject, "&body=")
-                            .concat(submissionBody.replace(/\r\n|\r|\n/g, "%0D%0A"));
+                            .concat(encodeURIComponent(submissionBody));
+                            // .concat(submissionBody.replace(/\r\n|\r|\n/g, "%0D%0A"));
                         // window.location = mailString;
                         mailtoHack(mailString);
                     } else {
