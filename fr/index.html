@@ -154,7 +154,7 @@
                                         s’applique)</b></label>
                                     <div class="form-check">
                                         <input class="form-check-input" v-model="travelActivities" type="checkbox"
-                                            value="I do or have travelled for work (in the last two years)"
+                                            value="Je fais ou j’ai fait des voyages pour le travail (au cours des deux dernières années)."
                                             id="traveledForWork" v-model="traveledForWor">
                                         <label class="form-check-label" for="traveledForWork">
                                             Je fais ou j’ai fait des voyages pour le travail (au cours des deux
@@ -163,7 +163,7 @@
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" v-model="travelActivities" type="checkbox"
-                                            value="I have travelled for work (more than two years ago)"
+                                            value="J’ai voyagé pour le travail (il y a plus de deux ans)."
                                             id="assist">
                                         <label class="form-check-label" for="assist">
                                             J’ai voyagé pour le travail (il y a plus de deux ans).
@@ -171,7 +171,7 @@
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" v-model="travelActivities" type="checkbox"
-                                            value="I assist others with booking travel or claiming expenses"
+                                            value="J’aide d’autres personnes à réserver un voyage ou à faire une demande de remboursement de frais."
                                             id="approveforothers">
                                         <label class="form-check-label" for="approveforothers">
                                             J’aide d’autres personnes à réserver un voyage ou à faire une demande de
@@ -180,7 +180,7 @@
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" v-model="travelActivities" type="checkbox"
-                                            value="I approve travel for others" name="responsibilities"
+                                            value="J’examine, je traite ou j’approuve les états financiers relatifs aux voyages." name="responsibilities"
                                             id="approveforothers">
                                         <label class="form-check-label" for="approveforothers">
                                             J’examine, je traite ou j’approuve les états financiers relatifs aux
@@ -189,18 +189,10 @@
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" v-model="travelActivities" type="checkbox"
-                                            value="I review, process or approve financials related to travel"
-                                            name="responsibilities" id="processOrReviews">
+                                        value="Autre, veuillez préciser." name="responsibilities"
+                                        id="travelActivitiesOther">
                                         <label class="form-check-label" for="processOrReviews">
                                             Autre, veuillez préciser.
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" v-model="travelActivities" type="checkbox"
-                                            value="Other, please specify" name="responsibilities"
-                                            id="travelActivitiesOther">
-                                        <label class="form-check-label" for="other">
-                                            Other, please specify
                                         </label>
                                     </div>
                                     <div class="form-group">
@@ -214,14 +206,14 @@
                                     <label for="travelActivities"><b>Lieu de travail principal</b></label>
                                     <div class="form-check">
                                         <input class="form-check-input" v-model="primaryWorkLocation" type="checkbox"
-                                            name="location" value="National Capital Region" id="nationalCapitalRegion">
+                                            name="location" value="Région de la capitale nationale" id="nationalCapitalRegion">
                                         <label class="form-check-label" for="nationalCapitalRegion">
                                             Région de la capitale nationale.
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" v-model="primaryWorkLocation" type="checkbox"
-                                            name="locationOther" value="other" id="locationOtherCheckbox">
+                                            name="locationOther" value="Autre, veuillez préciser" id="locationOtherCheckbox">
                                         <label class="form-check-label" for="locationOther">
                                             Autre, veuillez préciser.
                                         </label>
@@ -237,7 +229,7 @@
                                     <label for="participation"><b>Comment aimeriez-vous participer à nos études ?</b></label>
                                     <div class="form-check">
                                         <input class="form-check-input" v-model="participation" type="checkbox"
-                                            value="I'm willing to travel locally to meet you" name="participate"
+                                            value="Je suis prêt à me déplacer sur place pour vous rencontrer." name="participate"
                                             id="willingToTravelLocally">
                                         <label class="form-check-label" for="willingToTravelLocally">
                                             Je suis prêt à me déplacer sur place pour vous rencontrer.
@@ -245,7 +237,7 @@
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" v-model="participation" type="checkbox"
-                                            value="I'm willing to use my computer and/or mobile phone"
+                                            value="Je suis prêt à utiliser mon ordinateur ou mon téléphone portable."
                                             name="participate" id="devices">
                                         <label class="form-check-label" for="devices">
                                             Je suis prêt à utiliser mon ordinateur ou mon téléphone portable.
@@ -253,7 +245,7 @@
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" v-model="participation" type="checkbox"
-                                            value="I'm willing to have a NextGen Travel researcher come visit me at work"
+                                            value="Je suis prêt à recevoir la visite d’un chercheur du Programme de voyage de prochaine génération au travail."
                                             name="participate" id="visitAtWork">
                                         <label class="form-check-label" for="visitAtWork">
                                             Je suis prêt à recevoir la visite d’un chercheur du Programme de voyage de
@@ -262,7 +254,7 @@
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" v-model="participation" type="checkbox"
-                                            value="I'm willing to complete online activities or surveys"
+                                            value="Je suis prêt à participer à des activités en ligne ou à répondre à des sondages."
                                             name="participate" id="online">
                                         <label class="form-check-label" for="online">
                                             Je suis prêt à participer à des activités en ligne ou à répondre à des
@@ -274,14 +266,14 @@
                                     <label for="language"><b>Dans quelle langue préférez-vous donner votre avis?</b></label>
                                     <div class="form-check">
                                         <input class="form-check-input" v-model="language" type="checkbox"
-                                            name="language" value="french" id="french">
+                                            name="language" value="Français" id="french">
                                         <label class="form-check-label" for="french">
                                             Français
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" v-model="language" type="checkbox"
-                                            name="language" value="english" id="english">
+                                            name="language" value="Anglais" id="english">
                                         <label class="form-check-label" for="english">
                                             Anglais
                                         </label>
@@ -312,10 +304,16 @@
                                 <div class="form-group">
                                     <label for=""><b>Courriel</b></label>
                                     <input type="email" v-model="emailAddress" name="emailAddress" class="form-control"
-                                        aria-describedby="emailHelp" placeholder="">
+                                        aria-describedby="emailHelp" placeholder="" required="required">
                                 </div>
+
                                 <button class="btn btn-primary" v-on:click.prevent="submitForm">Ouvrez un modèle de courriel</button>
                                 <button class="btn btn-primary" v-on:click.prevent="copyPasteShow">Le modèle ne fonctionne pas?</button>
+                                <p v-if="errors.length">
+                                    <ul>
+                                        <li v-for="error in errors">{{ error }}</li>
+                                    </ul>
+                                </p>
                             </form>
                             <br />
                             <br />
@@ -417,19 +415,25 @@
                 firstName: "",
                 lastName: "",
                 emailAddress: "",
-                sendTo: ["to@therecipient.com"],
+                sendTo: ["michael.jenkins@tpsgc-pwgsc.gc.ca"],
                 emailSubject: "Appel de participants - Recherche sur les utilisateurs",
                 copyPaste: false,
                 submissionBody: "",
+                errors: [],
             },
             methods: {
                 submitForm: function () {
-                    let submissionBody = this.bodyText();
-                    let mailString = "mailto:"
-                        .concat(this.sendTo.join(","), "?subject=")
-                        .concat(this.emailSubject, "&body=")
-                        .concat(submissionBody.replace(/\r\n|\r|\n/g, "%0D%0A"));
-                    window.location = mailString;
+                    this.errors = [];
+                    if (this.validEmail(this.emailAddress)) {
+                        let submissionBody = this.bodyText();
+                        let mailString = "mailto:"
+                            .concat(this.sendTo.join(","), "?subject=")
+                            .concat(this.emailSubject, "&body=")
+                            .concat(submissionBody.replace(/\r\n|\r|\n/g, "%0D%0A"));
+                        window.location = mailString;
+                    } else {
+                        this.errors.push("Email invalid")
+                    }
                 },
                 onCopy: function (e) {
                     console.log(e);
@@ -439,17 +443,26 @@
                 onCopyError: function (e) {
                     alert("Copy Error")
                 },
+                validEmail: function (email) {
+                    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                    return re.test(email);
+                },
                 copyPasteShow: function () {
-                    let submissionBody = this.bodyText();
-                    console.log(submissionBody)
-                    this.submissionBody = submissionBody;
-                    this.copyPaste = true;
-                    Vue.nextTick(function () {
-                        var el = document.getElementById("copyPasteAnchor");
-                        el.scrollIntoView({
-                            block: 'start'
+                    this.errors = [];
+                    if (this.validEmail(this.emailAddress)) {
+                        let submissionBody = this.bodyText();
+                        console.log(submissionBody)
+                        this.submissionBody = submissionBody;
+                        this.copyPaste = true;
+                        Vue.nextTick(function () {
+                            var el = document.getElementById("copyPasteAnchor");
+                            el.scrollIntoView({
+                                block: 'start'
+                            });
                         });
-                    });
+                    } else {
+                        this.errors.push("Email invalid")
+                    }
                 },
                 bodyText: function () {
                     return "## Quelles sont les activités liées aux voyages qui font partie de vos responsabilités professionnelles?\n"
