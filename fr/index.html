@@ -8,11 +8,12 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Public Services and Procurement Canada - NextGen Travel Program</title>
+    <title>Le Programme de voyage prochaine génération et Services publics et Approvisionnement Canada</title>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://unpkg.com/vuex"></script>
     <script src="js/vue-clipboard.min.js"></script>
     <script>
@@ -48,11 +49,11 @@
                 <div class="col-md-10">
                     <div class="jumbotron">
                         <div class="text-center">
-                            <img src="./images/cfc-web-logo.png" alt="Code for Canada Logo" class="img-thumbnail"
+                            <img src="./images/cfc-web-logo.png" alt="Code for Canada logo" class="img-thumbnail"
                                 width=258>
-                            <img src="./images/nextgen-web-logo-en.png"
-                                alt="Public Services and Procurement Canada - NextGen Travel Program Logo"
-                                class="img-thumbnail" width=365>
+                            <img src="./images/nextgen-web-logo-fr.png"
+                                alt="Le Programme de voyage prochaine génération et Services publics et Approvisionnement Canada"
+                                class="img-thumbnail" width=510>
                         </div>
 
                         <br />
@@ -333,8 +334,13 @@
                                 <div>
                                     <h5 class="d-inline">Courrier: </h5>
                                     <button type="button" class="btn btn-outline-primary btn-sm float-right"
-                                        v-clipboard:copy="sendTo.join(',')" v-clipboard:success="onCopy"
-                                        v-clipboard:error="onCopyError">COPY Courrier</button>
+                                        v-clipboard:copy="sendTo.join(',')"
+                                        v-clipboard:success="onCopy"
+                                        v-clipboard:error="onCopyError"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                        title="Hooray!"
+                                        >COPY Courrier</button>
                                     <pre>{{sendTo.join(',')}}</pre>
                                 </div>
                                 <div>
@@ -376,6 +382,9 @@
     </script>
     <script>
         $(function () {
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
             let travelActivitiesCheckbox = $('#travelActivitiesOther');
             let travelActivitiesHidden = $("#hiddentravelActivitiesOther");
             let locationCheckbox = $('#locationOtherCheckbox');
@@ -436,12 +445,9 @@
                     }
                 },
                 onCopy: function (e) {
-                    console.log(e);
                     e.cancelBubble = true;
-                    // alert("Copied: " + e.text)
                 },
                 onCopyError: function (e) {
-                    // alert("Copy Error")
                 },
                 validEmail: function (email) {
                     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -451,7 +457,6 @@
                     this.errors = [];
                     if (this.validEmail(this.emailAddress)) {
                         let submissionBody = this.bodyText();
-                        console.log(submissionBody)
                         this.submissionBody = submissionBody;
                         this.copyPaste = true;
                         Vue.nextTick(function () {
