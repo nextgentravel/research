@@ -438,10 +438,10 @@
                 onCopy: function (e) {
                     console.log(e);
                     e.cancelBubble = true;
-                    alert("Copied: " + e.text)
+                    // alert("Copied: " + e.text)
                 },
                 onCopyError: function (e) {
-                    alert("Copy Error")
+                    // alert("Copy Error")
                 },
                 validEmail: function (email) {
                     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
