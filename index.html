@@ -369,6 +369,10 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
     </script>
     <script>
+        function mailto(href) {
+            window.open(href);
+        }
+
         $(function () {
             let travelActivitiesCheckbox = $('#travelActivitiesOther');
             let travelActivitiesHidden = $("#hiddentravelActivitiesOther");
@@ -423,8 +427,8 @@
                         let mailString = "mailto:"
                             .concat(this.sendTo.join(","), "?subject=")
                             .concat(this.emailSubject, "&body=")
-                            .concat(submissionBody.replace(/\r\n|\r|\n/g, "%0D%0A"));
-                        window.location = mailString;
+                            .concat(encodeURIComponent(submissionBody));
+                        mailto(mailString);
                     } else {
                         this.errors.push("Email invalid")
                     }
