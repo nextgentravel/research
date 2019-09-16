@@ -73,7 +73,7 @@
                         <p class="lead">
                             Dans la foulée de notre tournée d’engagement pancanadienne avec des centaines de
                             fonctionnaires comme vous, nous avons établi un partenariat avec <a
-                                href="https://www.codefor.ca" target="_blank">Code for Canada</a> pour
+                                href="https://www.codefor.ca/fr" target="_blank">Code for Canada</a> pour
                             explorer à quoi pourrait ressembler un service de voyages d’affaires axé sur l’utilisateur.
                             Pour ce faire, nous cherchons à recueillir davantage de commentaires, sous forme d’entrevues
                             individuelles, de sondages et d’autres recherches. Vous êtes intéressé? Veuillez remplir le
@@ -407,7 +407,7 @@
                 travelActivities: [],
                 travelActivitiesOther: "",
                 primaryWorkLocationOther: "",
-                primaryWorkLocation: [],
+                primaryWorkLocation: "",
                 participation: [],
                 language: [],
                 currentDepartment: "",
@@ -464,12 +464,12 @@
                     return "## Quelles sont les activités liées aux voyages qui font partie de vos responsabilités professionnelles?\n"
                         .concat(
                             this.travelActivities.join("\n"),
-                            "\n\n## Lieu de travail principal:\n"
+                            "\n\n## responsabilités professionnelles autre:\n"
                         )
                         .concat(this.travelActivitiesOther, "\n\n## Lieu de travail principal:\n")
                         .concat(
-                            this.primaryWorkLocation.join("\n"),
-                            "\n\n## Lieu de travail principal:\n"
+                            this.primaryWorkLocation,
+                            "\n\n## Lieu de travail principal autre:\n"
                         )
                         .concat(
                             this.primaryWorkLocationOther,

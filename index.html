@@ -401,7 +401,7 @@
                 travelActivities: [],
                 travelActivitiesOther: "",
                 primaryWorkLocationOther: "",
-                primaryWorkLocation: [],
+                primaryWorkLocation: "",
                 participation: [],
                 language: [],
                 currentDepartment: "",
@@ -463,7 +463,7 @@
                         )
                         .concat(this.travelActivitiesOther, "\n\n## Primary work location:\n")
                         .concat(
-                            this.primaryWorkLocation.join("\n"),
+                            this.primaryWorkLocation,
                             "\n\n## Primary work location other:\n"
                         )
                         .concat(
