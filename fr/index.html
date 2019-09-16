@@ -430,6 +430,7 @@
                             .concat(this.sendTo.join(","), "?subject=")
                             .concat(this.emailSubject, "&body=")
                             .concat(submissionBody.replace(/\r\n|\r|\n/g, "%0D%0A"));
+                        console.log(mailString)
                         window.location = mailString;
                     } else {
                         this.errors.push("Email invalid")
@@ -485,7 +486,6 @@
                         .concat(this.firstName, "\n\n## Nom:\n")
                         .concat(this.lastName, "\n\n## Courriel:\n")
                         .concat(this.emailAddress);
-
                 }
             }
         })
