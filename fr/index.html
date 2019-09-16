@@ -150,9 +150,10 @@
                                 possibilités de recherche pertinentes.</p>
                             <form>
                                 <div class="form-group">
-                                    <label for="travelActivities"><b>Quelles sont les activités liées aux voyages qui font
-                                        partie de vos responsabilités professionnelles? (Cochez tout ce qui
-                                        s’applique)</b></label>
+                                    <label for="travelActivities"><b>Quelles sont les activités liées aux voyages qui
+                                            font
+                                            partie de vos responsabilités professionnelles? (Cochez tout ce qui
+                                            s’applique)</b></label>
                                     <div class="form-check">
                                         <input class="form-check-input" v-model="travelActivities" type="checkbox"
                                             value="Je fais ou j’ai fait des voyages pour le travail (au cours des deux dernières années)."
@@ -164,8 +165,7 @@
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" v-model="travelActivities" type="checkbox"
-                                            value="J’ai voyagé pour le travail (il y a plus de deux ans)."
-                                            id="assist">
+                                            value="J’ai voyagé pour le travail (il y a plus de deux ans)." id="assist">
                                         <label class="form-check-label" for="assist">
                                             J’ai voyagé pour le travail (il y a plus de deux ans).
                                         </label>
@@ -181,8 +181,8 @@
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" v-model="travelActivities" type="checkbox"
-                                            value="J’examine, je traite ou j’approuve les états financiers relatifs aux voyages." name="responsibilities"
-                                            id="approveforothers">
+                                            value="J’examine, je traite ou j’approuve les états financiers relatifs aux voyages."
+                                            name="responsibilities" id="approveforothers">
                                         <label class="form-check-label" for="approveforothers">
                                             J’examine, je traite ou j’approuve les états financiers relatifs aux
                                             voyages.
@@ -190,8 +190,8 @@
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" v-model="travelActivities" type="checkbox"
-                                        value="Autre, veuillez préciser." name="responsibilities"
-                                        id="travelActivitiesOther">
+                                            value="Autre, veuillez préciser." name="responsibilities"
+                                            id="travelActivitiesOther">
                                         <label class="form-check-label" for="processOrReviews">
                                             Autre, veuillez préciser.
                                         </label>
@@ -199,22 +199,23 @@
                                     <div class="form-group">
                                         <input id="hiddentravelActivitiesOther" v-model="travelActivitiesOther"
                                             type="text" name="travelActivitiesOther" class="form-control"
-                                            aria-describedby="travelActivitiesOther"
-                                            placeholder="">
+                                            aria-describedby="travelActivitiesOther" placeholder="">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="travelActivities"><b>Lieu de travail principal</b></label>
                                     <div class="form-check">
                                         <input class="form-check-input" v-model="primaryWorkLocation" type="checkbox"
-                                            name="location" value="Région de la capitale nationale" id="nationalCapitalRegion">
+                                            name="location" value="Région de la capitale nationale"
+                                            id="nationalCapitalRegion">
                                         <label class="form-check-label" for="nationalCapitalRegion">
                                             Région de la capitale nationale.
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" v-model="primaryWorkLocation" type="checkbox"
-                                            name="locationOther" value="Autre, veuillez préciser" id="locationOtherCheckbox">
+                                            name="locationOther" value="Autre, veuillez préciser"
+                                            id="locationOtherCheckbox">
                                         <label class="form-check-label" for="locationOther">
                                             Autre, veuillez préciser.
                                         </label>
@@ -222,16 +223,16 @@
                                     <div class="form-group">
                                         <input id="hiddenPrimaryWorkLocationOther" v-model="primaryWorkLocationOther"
                                             type="text" name="locationOther" class="form-control"
-                                            aria-describedby="PrimaryWorkLocationOther"
-                                            placeholder="">
+                                            aria-describedby="PrimaryWorkLocationOther" placeholder="">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="participation"><b>Comment aimeriez-vous participer à nos études ?</b></label>
+                                    <label for="participation"><b>Comment aimeriez-vous participer à nos études
+                                            ?</b></label>
                                     <div class="form-check">
                                         <input class="form-check-input" v-model="participation" type="checkbox"
-                                            value="Je suis prêt à me déplacer sur place pour vous rencontrer." name="participate"
-                                            id="willingToTravelLocally">
+                                            value="Je suis prêt à me déplacer sur place pour vous rencontrer."
+                                            name="participate" id="willingToTravelLocally">
                                         <label class="form-check-label" for="willingToTravelLocally">
                                             Je suis prêt à me déplacer sur place pour vous rencontrer.
                                         </label>
@@ -264,7 +265,8 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="language"><b>Dans quelle langue préférez-vous donner votre avis?</b></label>
+                                    <label for="language"><b>Dans quelle langue préférez-vous donner votre
+                                            avis?</b></label>
                                     <div class="form-check">
                                         <input class="form-check-input" v-model="language" type="checkbox"
                                             name="language" value="Français" id="french">
@@ -283,8 +285,7 @@
                                 <div class="form-group">
                                     <label for=""><b>Ministère actuel: </b></label>
                                     <input type="text" v-model="currentDepartment" name="currentDepartment"
-                                        class="form-control" aria-describedby="emailHelp"
-                                        placeholder="">
+                                        class="form-control" aria-describedby="emailHelp" placeholder="">
                                 </div>
                                 <div class="form-group">
                                     <label for=""><b>Titre/poste actuel</b></label>
@@ -308,8 +309,10 @@
                                         aria-describedby="emailHelp" placeholder="" required="required">
                                 </div>
 
-                                <button class="btn btn-primary" v-on:click.prevent="submitForm">Ouvrez un modèle de courriel</button>
-                                <button class="btn btn-primary" v-on:click.prevent="copyPasteShow">Le modèle ne fonctionne pas?</button>
+                                <button class="btn btn-primary" v-on:click.prevent="submitForm">Ouvrez un modèle de
+                                    courriel</button>
+                                <button class="btn btn-primary" v-on:click.prevent="copyPasteShow">Le modèle ne
+                                    fonctionne pas?</button>
                                 <p v-if="errors.length">
                                     <ul>
                                         <li v-for="error in errors">{{ error }}</li>
@@ -330,17 +333,14 @@
                     <div v-if="copyPaste">
                         <div class="card bg-light mb-3">
                             <div class="card-body">
-                                <p>Veuillez copier et coller le modèle de courrier électronique suivant et envoyer votre réponse par courrier électronique</p>
+                                <p>Veuillez copier et coller le modèle de courrier électronique suivant et envoyer votre
+                                    réponse par courrier électronique</p>
                                 <div>
                                     <h5 class="d-inline">Courrier: </h5>
                                     <button type="button" class="btn btn-outline-primary btn-sm float-right"
-                                        v-clipboard:copy="sendTo.join(',')"
-                                        v-clipboard:success="onCopy"
-                                        v-clipboard:error="onCopyError"
-                                        data-toggle="tooltip"
-                                        data-placement="top"
-                                        title="Hooray!"
-                                        >COPY Courrier</button>
+                                        v-clipboard:copy="sendTo.join(',')" v-clipboard:success="onCopy"
+                                        v-clipboard:error="onCopyError" data-toggle="tooltip" data-placement="top"
+                                        title="Hooray!">COPY Courrier</button>
                                     <pre>{{sendTo.join(',')}}</pre>
                                 </div>
                                 <div>
@@ -355,7 +355,8 @@
                                         <h5 class="d-inline">Modèle de courrier électronique: </h5>
                                         <button type="button" class="btn btn-outline-primary btn-sm float-right"
                                             v-clipboard:copy="submissionBody" v-clipboard:success="onCopy"
-                                            v-clipboard:error="onCopyError">COPY modèle de courrier électronique</button>
+                                            v-clipboard:error="onCopyError">COPY modèle de courrier
+                                            électronique</button>
                                     </div>
                                     <br>
                                     <pre>{{submissionBody}}</pre>
@@ -447,10 +448,10 @@
                 onCopy: function (e) {
                     e.cancelBubble = true;
                 },
-                onCopyError: function (e) {
-                },
+                onCopyError: function (e) {},
                 validEmail: function (email) {
-                    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                    var re =
+                        /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
                     return re.test(email);
                 },
                 copyPasteShow: function () {
