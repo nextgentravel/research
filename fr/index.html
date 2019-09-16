@@ -47,13 +47,16 @@
         <div class="container">
             <div class="row justify-content-md-center">
                 <div class="col-md-10">
-                    <div class="jumbotron">
+                    <div class="jumbotron" style="background:transparent !important">
                         <div class="text-center">
-                            <img src="./../images/cfc-web-logo.png" alt="Code for Canada logo" class="img-thumbnail"
-                                width=258>
+                            <img
+                                src="./../images/cfc-web-logo.png"
+                                alt="Code for Canada logo"  
+                                width=258
+                                style="margin-right: 30px;">
                             <img src="./../images/nextgen-web-logo-fr.png"
                                 alt="Le Programme de voyage prochaine génération et Services publics et Approvisionnement Canada"
-                                class="img-thumbnail" width=510>
+                                 width=510>
                         </div>
 
                         <br />
@@ -70,7 +73,7 @@
                         <p class="lead">
                             Dans la foulée de notre tournée d’engagement pancanadienne avec des centaines de
                             fonctionnaires comme vous, nous avons établi un partenariat avec <a
-                                href="https://www.codefor.ca">Code for Canada</a> pour
+                                href="https://www.codefor.ca" target="_blank">Code for Canada</a> pour
                             explorer à quoi pourrait ressembler un service de voyages d’affaires axé sur l’utilisateur.
                             Pour ce faire, nous cherchons à recueillir davantage de commentaires, sous forme d’entrevues
                             individuelles, de sondages et d’autres recherches. Vous êtes intéressé? Veuillez remplir le
@@ -206,7 +209,7 @@
                                 <div class="form-group">
                                     <label for="travelActivities"><b>Lieu de travail principal</b></label>
                                     <div class="form-check">
-                                        <input class="form-check-input" v-model="primaryWorkLocation" type="checkbox"
+                                        <input class="form-check-input" v-model="primaryWorkLocation" type="radio"
                                             name="location" value="Région de la capitale nationale"
                                             id="nationalCapitalRegion">
                                         <label class="form-check-label" for="nationalCapitalRegion">
@@ -214,7 +217,7 @@
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" v-model="primaryWorkLocation" type="checkbox"
+                                        <input class="form-check-input" v-model="primaryWorkLocation" type="radio"
                                             name="locationOther" value="Autre, veuillez préciser"
                                             id="locationOtherCheckbox">
                                         <label class="form-check-label" for="locationOther">
@@ -309,18 +312,15 @@
                                     <input type="email" v-model="emailAddress" name="emailAddress" class="form-control"
                                         aria-describedby="emailHelp" placeholder="" required="required">
                                 </div>
-
-                                <button class="btn btn-primary" v-on:click.prevent="submitForm">Ouvrez un modèle de
-                                    courriel</button>
-                                <button class="btn btn-primary" v-on:click.prevent="copyPasteShow">Le modèle ne
-                                    fonctionne pas?</button>
+                                <button class="btn btn-primary" v-on:click.prevent="submitForm">(TO BE TRANSLATED) Open Email</button>
+                                <br>
+                                <small class="form-text text-muted"><a href="#" v-on:click.prevent="copyPasteShow">(TO BE TRANSLATED) Email client not configured? Click here to copy and paste to email</a></small>
                                 <p v-if="errors.length">
                                     <ul>
                                         <li v-for="error in errors">{{ error }}</li>
                                     </ul>
                                 </p>
                             </form>
-                            <br />
                             <br />
                         </div>
                     </div>
@@ -338,26 +338,15 @@
                                     réponse par courrier électronique</p>
                                 <div>
                                     <h5 class="d-inline">Courrier: </h5>
-                                    <button type="button" class="btn btn-outline-primary btn-sm float-right"
-                                        v-clipboard:copy="sendTo.join(',')" v-clipboard:success="onCopy"
-                                        v-clipboard:error="onCopyError" data-toggle="tooltip" data-placement="top"
-                                        title="Hooray!">COPY Courrier</button>
                                     <pre>{{sendTo.join(',')}}</pre>
                                 </div>
                                 <div>
                                     <h5 class="d-inline">Objet: </h5>
-                                    <button type="button" class="btn btn-outline-primary btn-sm float-right"
-                                        v-clipboard:copy="emailSubject" v-clipboard:success="onCopy"
-                                        v-clipboard:error="onCopyError">COPY Objet</button>
                                     <pre>{{emailSubject}}</pre>
                                 </div>
                                 <div>
                                     <div>
                                         <h5 class="d-inline">Modèle de courrier électronique: </h5>
-                                        <button type="button" class="btn btn-outline-primary btn-sm float-right"
-                                            v-clipboard:copy="submissionBody" v-clipboard:success="onCopy"
-                                            v-clipboard:error="onCopyError">COPY modèle de courrier
-                                            électronique</button>
                                     </div>
                                     <br>
                                     <pre>{{submissionBody}}</pre>

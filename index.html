@@ -49,13 +49,11 @@
         <div class="container">
             <div class="row justify-content-md-center">
                 <div class="col-md-10">
-                    <div class="jumbotron">
+                    <div class="jumbotron" style="background:transparent !important">
                         <div class="text-center">
-                            <img src="./images/cfc-web-logo.png" alt="Code for Canada Logo" class="img-thumbnail"
-                                width=258>
+                            <img src="./images/cfc-web-logo.png" alt="Code for Canada Logo" width=258 style="margin-right: 30px;">
                             <img src="./images/nextgen-web-logo-en.png"
-                                alt="Public Services and Procurement Canada - NextGen Travel Program Logo"
-                                class="img-thumbnail" width=365>
+                                alt="Public Services and Procurement Canada - NextGen Travel Program Logo" width=365>
                         </div>
 
                         <br />
@@ -69,7 +67,7 @@
                             standard for GC travel and are excited to build something exceptional together.</p>
                         <p class="lead">
                             Continuing to build on our cross-country engagement tour with hundreds of public servants
-                            like yourself, we've partnered with <a href="https://www.codefor.ca">Code for Canada</a> to
+                            like yourself, we've partnered with <a target="_blank" href="https://www.codefor.ca">Code for Canada</a> to
                             explore what a user-centric business
                             travel service could look like. To do this, we are looking to gather more feedback, in the
                             form of one-on-one interviews, surveys and other research. Could this be you? Are you
@@ -105,6 +103,7 @@
                         <div class="card card-body" style="text-align: left;">
                             <p>The definition of “personal information” is any information, in any form, about an
                                 identifiable individual. Refer to section 3 of the <a
+                                    target="_blank"
                                     href="http://laws-lois.justice.gc.ca/eng/acts/P-21/">Privacy Act</a> for further
                                 details
                                 regarding personal information.</p>
@@ -115,6 +114,7 @@
                             <p>Personal information is collected and used as described in the Treasury Board
                                 Secretariat’s Standard Personal Information Bank Outreach Activities (PSU 938)</p>
                             <p>Individuals have the right to file a complaint with the <a
+                                    target="_blank"
                                     href="https://www.canada.ca/en/treasury-board-secretariat/services/access-information-privacy/access-information/information-about-programs-information-holdings/standard-personal-information-banks.html#psu938">Privacy
                                     Commissioner of Canada</a>
                                 regarding the department’s handling of their personal information.</p>
@@ -209,14 +209,14 @@
                                 <div class="form-group">
                                     <label for="travelActivities"><b>Primary work location</b></label>
                                     <div class="form-check">
-                                        <input class="form-check-input" v-model="primaryWorkLocation" type="checkbox"
+                                        <input class="form-check-input" v-model="primaryWorkLocation" type="radio"
                                             name="location" value="National Capital Region" id="nationalCapitalRegion">
                                         <label class="form-check-label" for="nationalCapitalRegion">
                                             National Capital Region
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" v-model="primaryWorkLocation" type="checkbox"
+                                        <input class="form-check-input" v-model="primaryWorkLocation" type="radio"
                                             name="locationOther" value="other" id="locationOtherCheckbox">
                                         <label class="form-check-label" for="locationOther">
                                             Other, please specify
@@ -308,10 +308,9 @@
                                     <input type="email" v-model="emailAddress" name="emailAddress" class="form-control"
                                         aria-describedby="emailHelp" placeholder="">
                                 </div>
-                                <button class="btn btn-primary" v-on:click.prevent="submitForm">Open an Email
-                                    Template</button>
-                                <button class="btn btn-primary" v-on:click.prevent="copyPasteShow">Copy/Paste to
-                                    Email</button>
+                                <button class="btn btn-primary" v-on:click.prevent="submitForm">Open Email</button>
+                                <br>
+                                <small class="form-text text-muted"><a href="#" v-on:click.prevent="copyPasteShow">Email client not configured? Click here to copy and paste to email</a></small>
                                 <p v-if="errors.length">
                                     <ul>
                                         <li v-for="error in errors">{{ error }}</li>
@@ -336,24 +335,15 @@
                                     fields of your email client.</p>
                                 <div>
                                     <h5 class="d-inline">Email Address: </h5>
-                                    <button type="button" class="btn btn-outline-primary btn-sm float-right"
-                                        v-clipboard:copy="sendTo.join(',')" v-clipboard:success="onCopy"
-                                        v-clipboard:error="onCopyError">COPY EMAIL</button>
                                     <pre>{{sendTo.join(',')}}</pre>
                                 </div>
                                 <div>
                                     <h5 class="d-inline">Subject: </h5>
-                                    <button type="button" class="btn btn-outline-primary btn-sm float-right"
-                                        v-clipboard:copy="emailSubject" v-clipboard:success="onCopy"
-                                        v-clipboard:error="onCopyError">COPY SUBJECT</button>
                                     <pre>{{emailSubject}}</pre>
                                 </div>
                                 <div>
                                     <div>
                                         <h5 class="d-inline">Email Body: </h5>
-                                        <button type="button" class="btn btn-outline-primary btn-sm float-right"
-                                            v-clipboard:copy="submissionBody" v-clipboard:success="onCopy"
-                                            v-clipboard:error="onCopyError">COPY BODY</button>
                                     </div>
                                     <br>
                                     <pre>{{submissionBody}}</pre>
