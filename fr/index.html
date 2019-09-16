@@ -372,10 +372,11 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
     </script>
     <script>
+        function mailtoHack(href) {
+            window.open(href);
+        }
+
         $(function () {
-            $(function () {
-                $('[data-toggle="tooltip"]').tooltip()
-            })
             let travelActivitiesCheckbox = $('#travelActivitiesOther');
             let travelActivitiesHidden = $("#hiddentravelActivitiesOther");
             let locationCheckbox = $('#locationOtherCheckbox');
@@ -430,8 +431,8 @@
                             .concat(this.sendTo.join(","), "?subject=")
                             .concat(this.emailSubject, "&body=")
                             .concat(submissionBody.replace(/\r\n|\r|\n/g, "%0D%0A"));
-                        console.log(mailString)
-                        window.location = mailString;
+                        // window.location = mailString;
+                        mailtoHack(mailString);
                     } else {
                         this.errors.push("Email invalid")
                     }
