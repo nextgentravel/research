@@ -38,6 +38,15 @@
             'optimize_id': 'GTM-PZJFRC7'
         });
     </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-539GGR6');</script>
+        <!-- End Google Tag Manager -->
+
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -344,7 +353,7 @@
                                     <input type="email" v-model="emailAddress" name="emailAddress" class="form-control"
                                         aria-describedby="emailHelp" placeholder="">
                                 </div>
-                                <button class="btn btn-primary" v-on:click.prevent="submitForm">Open Email</button>
+                                <button id="openemail" class="btn btn-primary" v-on:click.prevent="submitForm">Open Email</button>
                                 <br>
                                 <small class="form-text text-muted"><a href="#" v-on:click.prevent="copyPasteShow">Email
                                         client not configured? Click here to copy and paste to email</a></small>
