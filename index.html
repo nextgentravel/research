@@ -2,6 +2,30 @@
 <html lang="en">
 
 <head>
+    <!-- Anti-flicker snippet (recommended)  -->
+    <style>
+        .async-hide {
+            opacity: 0 !important
+        }
+    </style>
+    <script>
+        (function (a, s, y, n, c, h, i, d, e) {
+            s.className += ' ' + y;
+            h.start = 1 * new Date;
+            h.end = i = function () {
+                s.className = s.className.replace(RegExp(' ?' + y), '')
+            };
+            (a[n] = a[n] || []).hide = h;
+            setTimeout(function () {
+                i();
+                h.end = null
+            }, c);
+            h.timeout = c;
+        })(window, document.documentElement, 'async-hide', 'dataLayer', 4000, {
+            'OPT_CONTAINER_ID': true
+        });
+    </script>
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,6 +46,19 @@
         window.addEventListener = window.addEventListener || function (e, f) {
             window.attachEvent('on' + e, f);
         };
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148245093-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-148245093-1', {
+            'optimize_id': 'GTM-PZJFRC7'
+        });
     </script>
 </head>
 
@@ -51,7 +88,8 @@
                 <div class="col-md-10">
                     <div class="jumbotron" style="background:transparent !important">
                         <div class="text-center">
-                            <img src="./images/cfc-web-logo.png" alt="Code for Canada Logo" width=258 style="margin-right: 30px;">
+                            <img src="./images/cfc-web-logo.png" alt="Code for Canada Logo" width=258
+                                style="margin-right: 30px;">
                             <img src="./images/nextgen-web-logo-en.png"
                                 alt="Public Services and Procurement Canada - NextGen Travel Program Logo" width=365>
                         </div>
@@ -67,7 +105,8 @@
                             standard for GC travel and are excited to build something exceptional together.</p>
                         <p class="lead">
                             Continuing to build on our cross-country engagement tour with hundreds of public servants
-                            like yourself, we've partnered with <a target="_blank" href="https://www.codefor.ca">Code for Canada</a> to
+                            like yourself, we've partnered with <a target="_blank" href="https://www.codefor.ca">Code
+                                for Canada</a> to
                             explore what a user-centric business
                             travel service could look like. To do this, we are looking to gather more feedback, in the
                             form of one-on-one interviews, surveys and other research. Could this be you? Are you
@@ -102,8 +141,7 @@
                     <div class="collapse" id="collapse">
                         <div class="card card-body" style="text-align: left;">
                             <p>The definition of “personal information” is any information, in any form, about an
-                                identifiable individual. Refer to section 3 of the <a
-                                    target="_blank"
+                                identifiable individual. Refer to section 3 of the <a target="_blank"
                                     href="http://laws-lois.justice.gc.ca/eng/acts/P-21/">Privacy Act</a> for further
                                 details
                                 regarding personal information.</p>
@@ -113,8 +151,7 @@
                                 voluntary, and will not be used to make any administrative decisions about you.</p>
                             <p>Personal information is collected and used as described in the Treasury Board
                                 Secretariat’s Standard Personal Information Bank Outreach Activities (PSU 938)</p>
-                            <p>Individuals have the right to file a complaint with the <a
-                                    target="_blank"
+                            <p>Individuals have the right to file a complaint with the <a target="_blank"
                                     href="https://www.canada.ca/en/treasury-board-secretariat/services/access-information-privacy/access-information/information-about-programs-information-holdings/standard-personal-information-banks.html#psu938">Privacy
                                     Commissioner of Canada</a>
                                 regarding the department’s handling of their personal information.</p>
@@ -310,7 +347,8 @@
                                 </div>
                                 <button class="btn btn-primary" v-on:click.prevent="submitForm">Open Email</button>
                                 <br>
-                                <small class="form-text text-muted"><a href="#" v-on:click.prevent="copyPasteShow">Email client not configured? Click here to copy and paste to email</a></small>
+                                <small class="form-text text-muted"><a href="#" v-on:click.prevent="copyPasteShow">Email
+                                        client not configured? Click here to copy and paste to email</a></small>
                                 <p v-if="errors.length">
                                     <ul>
                                         <li v-for="error in errors">{{ error }}</li>
@@ -488,14 +526,6 @@
                 }
             }
         })
-    </script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148245093-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-148245093-1', { 'optimize_id': 'GTM-PZJFRC7'});
     </script>
 </body>
 
